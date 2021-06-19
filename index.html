@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML EDITOR</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <img src="./icon.png" alt="devloper" />
+      <h1>CodePAD</h1>
+      <p>Test & write your HTML,CSS & JS content here</p>
+    </nav>
+    <section class="container">
+      <div class="editor">
+        <div class="box">
+          <h2>HTML CODE</h2>
+          <textarea id="html-code"></textarea>
+        </div>
+        <div class="box">
+          <h2>CSS CODE</h2>
+          <textarea id="css-code"></textarea>
+        </div>
+        <div class="box">
+          <h2>JAVASCRIPT CODE</h2>
+          <textarea id="js-code"></textarea>
+        </div>
+      </div>
+      <div class="op">
+        <h2>OUTPUT:</h2>
+        <iframe id="output"></iframe>
+      </div>
+    </section>
+    <script>
+      function run() {
+        let htmlcode = document.querySelector("#html-code").value;
+        let csscode =
+          "<style>" + document.querySelector("#css-code").value + "</style>";
+        let jscode = document.querySelector("#js-code").value;
+        let output = document.querySelector("#output");
+        output.contentDocument.body.innerHTML = htmlcode + csscode;
+        output.contentWindow.eval(jscode);
+      }
+      let htmlcode = document
+        .querySelector("#html-code")
+        .addEventListener("keyup", run);
+      let csscode = document
+        .querySelector("#css-code")
+        .addEventListener("keyup", run);
+      let jscode = document
+        .querySelector("#js-code")
+        .addEventListener("keyup", run);
+    </script>
+  </body>
+</html>

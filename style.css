@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    background-image: linear-gradient(135deg, rgba(159, 159, 159, 0.46) 0%, rgba(159, 159, 159, 0.46) 14.286%,rgba(165, 165, 165, 0.46) 14.286%, rgba(165, 165, 165, 0.46) 28.572%,rgba(171, 171, 171, 0.46) 28.572%, rgba(171, 171, 171, 0.46) 42.858%,rgba(178, 178, 178, 0.46) 42.858%, rgba(178, 178, 178, 0.46) 57.144%,rgba(184, 184, 184, 0.46) 57.144%, rgba(184, 184, 184, 0.46) 71.43%,rgba(190, 190, 190, 0.46) 71.43%, rgba(190, 190, 190, 0.46) 85.716%,rgba(196, 196, 196, 0.46) 85.716%, rgba(196, 196, 196, 0.46) 100.002%),linear-gradient(45deg, rgb(252, 252, 252) 0%, rgb(252, 252, 252) 14.286%,rgb(246, 246, 246) 14.286%, rgb(246, 246, 246) 28.572%,rgb(241, 241, 241) 28.572%, rgb(241, 241, 241) 42.858%,rgb(235, 235, 235) 42.858%, rgb(235, 235, 235) 57.144%,rgb(229, 229, 229) 57.144%, rgb(229, 229, 229) 71.43%,rgb(224, 224, 224) 71.43%, rgb(224, 224, 224) 85.716%,rgb(218, 218, 218) 85.716%, rgb(218, 218, 218) 100.002%);
+}
+#navbar h1{
+    color: #efff69;
+    font-size: 35px;
+    text-shadow: 1px 1px 10px black;
+    margin: 10px;
+}
+#navbar p{
+    color: #efff69;
+    font-size: 17px;
+    text-shadow: 1px 1px 15px black;
+    font-weight: bold;
+    margin: 10px;
+}
+#navbar{
+display: flex;
+justify-content: space-around;
+align-items: center;
+background-image: repeating-linear-gradient(0deg, hsla(127,4%,81%,0.05) 0px, hsla(127,4%,81%,0.05) 1px,transparent 1px, transparent 11px,hsla(127,4%,81%,0.05) 11px, hsla(127,4%,81%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(135deg, hsla(127,4%,81%,0.05) 0px, hsla(127,4%,81%,0.05) 1px,transparent 1px, transparent 11px,hsla(127,4%,81%,0.05) 11px, hsla(127,4%,81%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(0deg, hsla(127,4%,81%,0.05) 0px, hsla(127,4%,81%,0.05) 1px,transparent 1px, transparent 11px,hsla(127,4%,81%,0.05) 11px, hsla(127,4%,81%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(135deg, hsla(127,4%,81%,0.05) 0px, hsla(127,4%,81%,0.05) 1px,transparent 1px, transparent 11px,hsla(127,4%,81%,0.05) 11px, hsla(127,4%,81%,0.05) 12px,transparent 12px, transparent 32px),linear-gradient(90deg, rgb(223, 195, 5),rgb(221, 78, 0));;
+}
+#navbar img{
+    width: 70px;
+    margin: 10px;
+}
+
+.editor{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px;
+    align-items: flex-start;
+   float: left;
+   clear: both;
+}
+.editor textarea{
+    width: 500px;
+    margin: 10px 0px;
+    height: 300px;
+    overflow: auto;
+    background: none;
+    resize: none;
+    border: 2px solid black;
+    padding: 10px 5px;
+    font-size: 18px;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 25px black;
+
+}
+.box h2{
+    text-align: center;
+    color: rgb(0, 140, 255);
+    text-shadow: 1px 1px 1px darkblue;
+}
+.op{
+float: right;
+margin: 10px 20px;
+}
+.op h2{
+    text-align: center;
+    color: orangered;
+    text-shadow: 1px 1px 2px red;
+}
+.op iframe{
+    width: 50vw;
+    height: 965px;
+    border: 2px solid black;
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px black;
+}
+footer{
+    display: block;
+    position: absolute;
+    top: 72rem;
+    left: 0px;
+    background: black;
+}
+@media only screen and (max-width: 1382px) {
+    h1{
+        font-size: 28px;
+    }
+    p{
+        font-size: 10px;
+        line-height: 1rem;
+    }
+    #navbar img{
+        width: 50px;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .editor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    }
+    .editor textarea{
+        width: 400px;
+        margin: 0px 5px;
+    }
+    .op{
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* width: fit-content; */
+    }
+    .op iframe{
+        width: 90vw;
+        height: 400px;
+    }
+}
+@media only screen and (max-width: 430px){
+    .editor textarea{
+        width: 260px;
+        margin: 0px 5px;
+    }
+} 
