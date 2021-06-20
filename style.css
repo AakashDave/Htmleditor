@@ -128,4 +128,12 @@ footer{
         width: 260px;
         margin: 0px 5px;
     }
+    #navbar h1{
+        font-size: 25px;
+        margin: 6px;
+    }
+    #navbar p{
+        font-size: 12px;
+        margin: 5px;
+    }
 } 
