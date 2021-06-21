@@ -3,9 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="codepad code editor for begginer,testing your code with this website without touch">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="John Doe">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML EDITOR</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>codepad | HTML EDITOR</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="fav.png" type="image/x-icon">
   </head>
   <body>
     <nav id="navbar">
@@ -13,26 +18,40 @@
       <h1>CodePAD</h1>
       <p>Test & write your HTML,CSS & JS content here</p>
     </nav>
-    <section class="container">
-      <div class="editor">
-        <div class="box">
+    <div class="main">
+      <div class="box1">
+        <div class="html txt">
           <h2>HTML CODE</h2>
-          <textarea placeholder="write code here.........                             eg.<h1>hellp,world.</h1>" id="html-code"></textarea>
+          <textarea placeholder="write code here.........                                        eg.<h1>hello,world.</h1>" id="html-code"></textarea>
         </div>
-        <div class="box">
+        <div class="css txt">
           <h2>CSS CODE</h2>
-          <textarea id="css-code" placeholder="write code here.........                             h1{                                             color:red;                                                }"></textarea>
+          <textarea id="css-code" placeholder="write code here.........                                     eg.h1{ color:red;                                                }"></textarea>
         </div>
-        <div class="box">
+        <div class="js txt">
           <h2>JAVASCRIPT CODE</h2>
-          <textarea id="js-code" placeholder="write JS code here.........                    eg.let a=10"></textarea>
+          <textarea id="js-code" placeholder="write JS code here.........                                  eg.let a=10"></textarea>
         </div>
       </div>
-      <div class="op">
+      <div class="box2">
         <h2>OUTPUT:</h2>
         <iframe id="output"></iframe>
       </div>
+    </div>
+    <section class="projects">
+      <div class="box1">
+        <details>
+          <summary>mini projects</summary>
+          <p>coming soon</p>
+        </details>
+      </div>
     </section>
+    <footer>
+      <div class="footer">
+        <a href="https://www.instagram.com/__aakash_dave__/" class="fa fa-instagram">__aakash_dave__</a>
+        <p>&copy; copyright,All rigth reserved,&hearts; from aakash;</p>
+      </div>
+    </footer>
     <script>
       function run() {
         let htmlcode = document.querySelector("#html-code").value;
