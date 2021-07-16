@@ -1,0 +1,129 @@
+<!-- this is the empolyee interest form devloped by aakash dave -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interest form</title>
+    <link rel="stylesheet" href="prac1.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="icon.png" type="image/x-icon">
+<style>
+/* heading */
+body{
+    background-color: rgb(230, 175, 230);
+}
+#myhead {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color:purple ;
+border: 2px solid black;
+font-style:oblique;
+color: rgb(222, 166, 240);
+}
+form{
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+#mydet {
+    border: 2px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.primarycls{
+    border: 2px solid black;
+    border-radius:10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.btn{
+    border: 2px solid black;
+    border-radius:10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: purple;
+    font-weight: bold;
+    color: rgb(230, 175, 230);
+    padding: 10px;
+    margin-left: 50%;
+
+}
+footer{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+    line-height: 2.3em;
+    
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+
+}
+</style>
+</head>
+
+<body>
+    <hr>
+    <h1 id="myhead">Employee Interest Surway Form</h1>
+
+    <span>
+    <details id="mydet">this form is totally about employee interest</details></span> <br><hr>
+        <!-- form start here -->
+    <form action="/myaction.java">
+        <div>
+        <label for="name">Enter your name:</label>
+        <input type="text" name="myname" id="name" placeholder="full name" class="primarycls" >
+        </div><br>
+        <div>
+            <label for="email">Enter your email id:</label>
+            <input type="email" name="myemail" id="email" placeholder="email" class="primarycls" >
+            </div><br>
+        <div>
+        <label for="depart">Enter your department:</label>
+        <input type="text" name="mydepart" id="depart" class="primarycls" placeholder="s.ware,main, etc.">
+        </div>
+        <br>
+        <div>
+            tell us about little yourself: <br> <textarea name="text" cols="30" rows="10" class="primarycls" placeholder="in 150 words"></textarea>
+        </div> <br>
+        <div>
+            <label for="radio">Do You Exercise at Home?</label>
+            yes <input type="radio" name="myr" id="radio"> no <input type="radio" name="myr" id="radio">
+        </div> <br>
+
+        <div>
+            <label for="check">How do you like to read about your favorite topics?</label>
+            <br> <input type="checkbox" name="mybox1" id="check">Books 
+             <input type="checkbox" name="mybox2" id="check">online resource 
+              <input type="checkbox" name="mybox3" id="check">apps 
+               <input type="checkbox" name="mybox4" id="check">Magazine
+        </div> <br>
+
+        <div>
+            <label for="selec">What genre of movies do you like?</label>
+            <select name="mysel" id="selec" class="primarycls">
+                <option value="cmd">comedy</option>
+                <option value="act" >action</option>
+                <option value="lv">love</option>
+                <option value="bio">biography</option>
+
+            </select>
+        </div> <br>
+
+    
+        <div>
+            <input type="reset" value="reset form" class="btn">
+        </div> <br>
+        <div>
+            <input type="submit" value="Submit form" class="btn">
+        </div>
+    </form>
+    <hr>
+    <footer>
+        <ul><li> <a href="">HOME</a></li>
+        <li><a href="">CONTACT US</a></li>
+        <li><a href="">ABOUT US</a></li>
+        <li><a href="">HELP</a></li></ul>
+        <h5>devloped by :aakash dave</h5>
+    </footer>
+</body>
+</html>

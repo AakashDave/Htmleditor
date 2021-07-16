@@ -1,0 +1,186 @@
+<!-- this is the travel webpage devloped by aakash dave -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mera bharat</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <!-- css start from here -->
+    <style>
+    *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.5)), url('img/tajm2.jpg');
+    background-size: 100% 130%;
+    width: 100%;
+    background-position: 100% 70%;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+.navbar{
+    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.4);
+}
+.navbar #logo{
+    margin: 10px 50px;
+    color: rgb(3, 214, 214);
+    text-shadow:2px 2px 10px rgb(1, 63, 63);
+}
+.navbar .menu{
+    /* border: 2px solid rebeccapurple; */
+    width: 550px;
+    
+}
+.navbar .menu ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+.navbar li a{
+    text-decoration: none;
+    color: white;
+}
+.navbar li a:hover{
+    text-decoration: underline;
+    color: rgb(70, 179, 187);
+    font-weight: bold;
+}
+.navbar li a:active{
+    text-decoration: underline;
+    color: rgb(61, 128, 133);
+}
+main{
+    height: 526px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+main .titlehead{
+    font-size: 37px;
+    text-shadow: 2px 2px 10px black;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+main .mainhead{
+    font-size: 45px;
+    text-shadow: 2px 2px 10px black;
+    letter-spacing: 3px;
+    
+}
+main p{
+    line-height: 64px;
+    font-size: 25px;
+}
+main a{
+    margin: 10px;
+    text-decoration: none;
+}
+.changec::before
+{   content: "";
+    font-size: 45px;
+    text-shadow: 2px 2px 10px rgb(0, 0, 0);
+    letter-spacing: 3px;
+    color: rgb(66, 163, 170);
+    animation: aakash 10s infinite linear;
+}
+@keyframes aakash{
+    0%{
+        content: "DELHI";
+    }
+    15%{
+        content: "JAIPUR";
+    }
+    30%{
+        content: "KERALA";
+    }
+    45%{
+        content: "GUJRAT";
+    }
+    60%{
+        content: "JAMMU-KASHMIR";
+    }
+    75%{
+        content: "KOLKATTA";
+    }
+    100%{
+        content: "GOA";
+
+    }
+}
+.btnone{
+    color: white;
+    background: rgb(61, 128, 133);
+    padding: 4px;
+    border: 2px solid black;
+    border-radius: 8px;
+    
+}
+.btnone:hover{
+    color:  rgb(61, 128, 133);
+    background: white;
+    transition: 1s;
+}
+.btntwo{
+    color: rgb(61, 128, 133);
+    background: white;
+    padding: 4px;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-top: 50px;
+
+}
+.btntwo:hover{
+    color:  white;
+    background: rgb(61, 128, 133);
+    transition: 2s;
+}
+    </style>
+    <!-- css ending -->
+</head>
+
+<body>
+    <!-- navbar start here -->
+    <header>
+        <nav class="navbar">
+            <div class="animate__animated animate__heartBeat animate__infinite" id="logo">
+                <h2>MERA BHARAT</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">GALLERY</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">CONTACTS</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- main content start here -->
+    <main>
+        <section>
+            <h2 class="titlehead">WELCOME TO INDIA</h2>
+            <h2 class="mainhead">DO COME & VISITE</h2><span class="changec"></span>
+            <p>"india once is not enough"</p>
+            <a href="#" class="btnone">LEARN MORE</a>
+            <a href="#" class="btntwo"> SIGN UP</a>
+        </section>
+    </main>
+</body>
+
+</html>

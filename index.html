@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="codepad code editor for begginer,testing your code with this website without touch">
+    <meta name="description" content="User can write and test their html css javascript code here in a simple way,also mini projects are given,codepad">
   <meta name="keywords" content="HTML, CSS, JavaScript">
   <meta name="author" content="John Doe">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,56 +11,102 @@
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="fav.png" type="image/x-icon">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   </head>
   <body>
     <nav id="navbar">
-      <img src="./icon.png" alt="devloper" />
-      <h1>CodePAD</h1>
+      <img src="./logo.png" alt="devloper" />
+      <h1 class="animate__animated animate__bounce animate__headShake animate__infinite	infinite animate__slow animate__delay-1s ">CodePAD</h1>
       <p>Test & write your HTML,CSS & JS content here</p>
     </nav>
     <div class="main">
+      <p>Test & write your HTML,CSS & JS content here</p>
       <div class="box1">
         <div class="html txt">
-          <h2>HTML CODE</h2>
-          <textarea placeholder="write code here.........                                        eg.<h1>hello,world.</h1>" id="html-code"></textarea>
+          <h2 class="animate__animated animate__bounce animate__shakeX animate__repeat-2	2 animate__slow animate__delay-1s ">HTML CODE</h2>
+          <textarea class="animate__animated animate__bounce animate__backInDown animate__repeat-1	1 animate__fast animate__delay-2s" placeholder="write code here.........                                                                                                                              eg.<h1>hello,world.</h1>" id="html-code"></textarea>
+            <button id="reset-html" onclick="resetHtml()" class="reset">RESET HTML</button>
+            
         </div>
         <div class="css txt">
-          <h2>CSS CODE</h2>
-          <textarea id="css-code" placeholder="write code here.........                                     eg.h1{ color:red;                                                }"></textarea>
+          <h2 class="animate__animated animate__bounce animate__shakeX animate__repeat-2	2 animate__slow animate__delay-1s ">CSS CODE</h2>
+          <textarea class="animate__animated animate__bounce animate__backInDown animate__repeat-1	1 animate__fast animate__delay-2s" id="css-code" placeholder="write code here.........                                                                                                                                  eg.h1{ color:red;                                                                                                                                                        }"></textarea>
+          <button id="reset-css" onclick="resetCss()" class="reset">RESET CSS</button>
         </div>
         <div class="js txt">
-          <h2>JAVASCRIPT CODE</h2>
-          <textarea id="js-code" placeholder="write JS code here.........                                  eg.let a=10"></textarea>
+          <h2 class="animate__animated animate__bounce animate__shakeX animate__repeat-2	2 animate__slow animate__delay-1s ">JAVASCRIPT CODE</h2>
+          <textarea id="js-code" class="animate__animated animate__bounce animate__backInDown animate__repeat-1	1 animate__fast animate__delay-2s" placeholder="write JS code here.........                                                                                                                             eg.let a=10"></textarea>
+          <button id="reset-js" onclick="resetJs()" class="reset">RESET JS</button>
+
         </div>
       </div>
       <div class="box2">
-        <h2>OUTPUT:</h2>
+        <h2 class="animate__animated animate__bounce animate__flash animate__repeat-1	1 animate__slow animate__delay-2s ">OUTPUT:</h2>
         <iframe id="output"></iframe>
       </div>
     </div>
     <section class="projects">
-      <div class="box1">
+      <h2>PROJECTS</h2>
+      <!-- project1 -->
+      <div class="pro-box">
         <details>
-          <summary>mini projects</summary>
-          <p>coming soon</p>
+        <summary>
+          TRIBUTE PAGE
+        </summary>
+        <a href="1tribute-page.txt" download>download source code of tribute page here</a>
         </details>
       </div>
+      <!-- project2 -->
+      <div class="pro-box">
+        <details>
+        <summary>
+          SURVEY FORM
+        </summary>
+        <a href="2form.txt" download>download source code of survey form here</a>
+        </details>
+      </div>  
+          <!--project3  -->
+      <div class="pro-box">
+        <details>
+        <summary>
+          TRAVEL WEBSITE PAGE
+        </summary>
+        <a href="3travel.txt" download>download source code of travel website here</a>
+        </details>
+      </div>      
+
     </section>
+    <!-- footer -->
     <footer>
       <div class="footer">
-        <a href="https://www.instagram.com/__aakash_dave__/" class="fa fa-instagram">__aakash_dave__</a>
-        <p>&copy; copyright,All rigth reserved,&hearts; from aakash;</p>
+        <a href="https://www.instagram.com/__aakash_dave__/" target="_blank" class="fa fa-instagram">__aakash_dave__</a>
+        <p>&copy; copyright,All rigth reserved,&hearts; from aakash</p>
       </div>
     </footer>
+    <!-- javascript start here -->
     <script>
       function run() {
         let htmlcode = document.querySelector("#html-code").value;
-        let csscode =
-          "<style>" + document.querySelector("#css-code").value + "</style>";
+        let csscode ="<style>" + document.querySelector("#css-code").value + "</style>";
         let jscode = document.querySelector("#js-code").value;
         let output = document.querySelector("#output");
         output.contentDocument.body.innerHTML = htmlcode + csscode;
         output.contentWindow.eval(jscode);
+      }
+      function resetHtml(){
+        document.querySelector("#html-code").value='';
+        document.querySelector("#output").contentDocument.body.innerHTML='';
+      }
+      function resetCss(){
+        document.querySelector("#css-code").value='';
+        document.querySelector("#output").contentDocument.body.innerHTML=document.querySelector("#html-code").value;
+      }
+      function resetJs(){
+        document.querySelector("#js-code").value='';
+        document.querySelector("#output").contentWindow.eval(jscode)='';
       }
       let htmlcode = document
         .querySelector("#html-code")
